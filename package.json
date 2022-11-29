@@ -1,0 +1,22 @@
+{
+  "name": "cypress_lambdatest_ab",
+  "version": "1.0.0",
+  "description": "Automation tesing using Cypress on Cloud Platform - LambdaTest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anshita-Bhasin/Cypress_LambdaTest_AB.git"
+  },
+  "author": "Anshita Bhasin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anshita-Bhasin/Cypress_LambdaTest_AB/issues"
+  },
+  "homepage": "https://github.com/Anshita-Bhasin/Cypress_LambdaTest_AB#readme",
+  "devDependencies": {
+    "cypress": "^11.2.0"
+  }
+}
