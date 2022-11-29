@@ -1,4 +1,4 @@
-#Install Cypress (Node version should be 12 and above)
+# Install Cypress (Node version should be 12 and above)
 1. npm init
 2. npm install cypress --save-dev
 
