@@ -12,11 +12,7 @@
   },
   "author": "Anshita Bhasin",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Anshita-Bhasin/Cypress_LambdaTest_AB/issues"
-  },
-  "homepage": "https://github.com/Anshita-Bhasin/Cypress_LambdaTest_AB#readme",
-  "devDependencies": {
+   "devDependencies": {
     "cypress": "^11.2.0"
   }
 }
