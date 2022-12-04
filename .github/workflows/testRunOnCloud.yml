@@ -22,19 +22,4 @@ jobs:
           browser: chrome
 
 
-      - name: Start LT Tunnel
-        uses: LambdaTest/LambdaTest-tunnel-action@v1
-        id: tunnel
-       
-        with:
-          user: ${{ secrets.LT_EMAIL }}
-          accessKey: ${{ secrets.LT_ACCESS_KEY }}
-          tunnelName: "testTunnel"
-      - run: npm test
-      
-
-      - name: Export Tunnel Logs for debugging
-        uses: actions/upload-artifact@v2
-        with:
-          name: tunnel_logs
-          path: ${{ steps.tunnel.outputs.logFileName }}
+   
