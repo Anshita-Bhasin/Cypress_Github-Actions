@@ -8,7 +8,17 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Cypress Test
-        uses: cypress-io/github-action@v2
+        uses: LambdaTest/LambdaTest-tunnel-action@v1
+        id: tunnel
+       
         with:
-          command: lambdatest-cypress run
-          browser: chrome
+          user: ${{ secrets.LT_EMAIL }}
+          accessKey: ${{ secrets.LT_ACCESS_KEY }}
+          tunnelName: "testTunnel"
+      - run: npm test
+
+      - name: Export Tunnel Logs for debugging
+        uses: actions/upload-artifact@v2
+        with:
+          name: tunnel_logs
+          path: ${{ steps.tunnel.outputs.logFileName }}
