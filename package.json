@@ -4,7 +4,7 @@
   "description": "Automation tesing using Cypress on Cloud Platform - LambdaTest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lambdatest-cypress run"
   },
   "repository": {
     "type": "git",
