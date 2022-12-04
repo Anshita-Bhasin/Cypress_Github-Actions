@@ -13,8 +13,8 @@ jobs:
           command: npm ci
       - run: npm ci
       - run: npm install lambdatest-cypress-cli
-      - run: lambdatest-cypress init
-      - run: lambdatest-cypress run
+      - run: npm run lambdatest-cypress init
+      - run: npm lambdatest-cypress run
         
        
 
