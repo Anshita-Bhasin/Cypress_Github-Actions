@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Cypress Cloud Tests
 on: [push]
 jobs:
   Cypress-Test:
@@ -8,13 +8,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Cypress Test
-        uses: actions/setup-node@v3
+        uses: cypress-io/github-action@v2
         with:
-          command: npm ci
-      - run: npm ci
-      - run: npm install lambdatest-cypress-cli
-      - run: npm run lambdatest-cypress init
-      - run: npm lambdatest-cypress run
-        
-       
-
+          command: lambdatest-cypress run
+          browser: chrome
