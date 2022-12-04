@@ -7,7 +7,15 @@ jobs:
       - name: Checkout GitCode
         uses: actions/checkout@v2
 
-      - name: Run Cypress Test
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install
+
+
+      - name: Start LT Tunnel
         uses: LambdaTest/LambdaTest-tunnel-action@v1
         id: tunnel
        
@@ -15,7 +23,7 @@ jobs:
           user: ${{ secrets.LT_EMAIL }}
           accessKey: ${{ secrets.LT_ACCESS_KEY }}
           tunnelName: "testTunnel"
-      - run: npm lambdatest-cypress run
+      - run: npm run lambdatest-cypress run
       
 
       - name: Export Tunnel Logs for debugging
