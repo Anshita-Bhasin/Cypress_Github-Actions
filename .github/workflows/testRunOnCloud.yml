@@ -8,16 +8,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Cypress Test
-        uses: cypress-io/github-action@v2
-        with:
-          command: npx cypress run
-          browser: chrome
-
-      - name: Run Cypress Test on cloud platform
         uses: actions/setup-node@v3
         with:
-        - run: npm ci
-        - run: npm install lambdatest-cypress-cli
-        - run: lambdatest-cypress init
-        - run: lambdatest-cypress run
+          command: npm ci
+      - run: npm ci
+      - run: npm test
+      - run: npm install lambdatest-cypress-cli
+      - run: lambdatest-cypress init
+      - run: lambdatest-cypress run
+        
+       
 
