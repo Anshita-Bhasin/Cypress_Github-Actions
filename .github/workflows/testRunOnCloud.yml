@@ -15,7 +15,8 @@ jobs:
           user: ${{ secrets.LT_EMAIL }}
           accessKey: ${{ secrets.LT_ACCESS_KEY }}
           tunnelName: "testTunnel"
-      - run: npm test
+      - run: lambdatest-cypress run
+      
 
       - name: Export Tunnel Logs for debugging
         uses: actions/upload-artifact@v2
