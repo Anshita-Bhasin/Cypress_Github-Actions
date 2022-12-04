@@ -12,7 +12,10 @@
   },
   "author": "Anshita Bhasin",
   "license": "ISC",
-   "devDependencies": {
+  "devDependencies": {
     "cypress": "^11.2.0"
+  },
+  "dependencies": {
+    "lambdatest-cypress-cli": "^3.0.7"
   }
 }
