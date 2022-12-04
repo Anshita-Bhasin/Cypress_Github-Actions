@@ -1,6 +1,6 @@
 
 name: GitHub Actions Dependable
-on:[push]
+on: [push]
 jobs:
   Cypress-Test:
     runs-on: ubuntu-latest
