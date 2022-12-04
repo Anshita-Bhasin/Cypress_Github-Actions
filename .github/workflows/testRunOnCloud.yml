@@ -15,6 +15,13 @@ jobs:
       - run: npm install
 
 
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test
+          browser: chrome
+
+
       - name: Start LT Tunnel
         uses: LambdaTest/LambdaTest-tunnel-action@v1
         id: tunnel
@@ -23,7 +30,7 @@ jobs:
           user: ${{ secrets.LT_EMAIL }}
           accessKey: ${{ secrets.LT_ACCESS_KEY }}
           tunnelName: "testTunnel"
-      - run: npm run lambdatest-cypress run
+      - run: npm test
       
 
       - name: Export Tunnel Logs for debugging
