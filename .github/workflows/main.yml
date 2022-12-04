@@ -1,5 +1,5 @@
 
-name: GitHub Actions Dependable
+name: Cypress Tests  
 on: [push]
 jobs:
   Cypress-Test:
