@@ -1,14 +1,14 @@
 {
-  "name": "cypress_lambdatest_ab",
+  "name": "cypress_github-actions-example",
   "version": "1.0.0",
-  "description": "Automation tesing using Cypress on Cloud Platform - LambdaTest",
+  "description": "test automation using cypress",
   "main": "index.js",
   "scripts": {
     "test": "lambdatest-cypress run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Anshita-Bhasin/Cypress_LambdaTest_AB.git"
+    "url": "https://github.com/Anshita-Bhasin/Cypress_Github-Actions.git"
   },
   "author": "Anshita Bhasin",
   "license": "ISC",
