@@ -33,7 +33,7 @@
       }
    },
    "tunnel_settings": {
-      "tunnel": false,
-      "tunnel_name": null
+      "tunnel": false
+    
    }
 }
