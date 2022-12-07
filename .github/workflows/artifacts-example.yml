@@ -1,0 +1,19 @@
+name: Cypress Artifacts
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    name: Test Artifacts
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v4
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
