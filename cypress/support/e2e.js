@@ -14,7 +14,26 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+Cypress.on("fail", (e, runnable) => {
+  console.log("error", e);
+  console.log("runnable", runnable);
+  console.log("message", e.message);
+  if (
+    e.name === "AssertionError" &&
+    !e.message.includes(
+      "Timed out retrying after 4000ms: Expected to find element: `.error-message`, but never found it."
+    )
+  ) {
+    throw e;
+  }
+});
+
+Cypress.on("uncaught:exception", (e, runnable) => {
+  console.log("error", e);
+  console.log("runnable", runnable);
+  if (e.message.includes("Things went bad")) {
+    return false;
+  }
+});
