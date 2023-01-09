@@ -2,6 +2,6 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    failOnStatusCode: false,
+    experimentalStudio: true,
   },
 });

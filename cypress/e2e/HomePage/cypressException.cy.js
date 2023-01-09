@@ -13,7 +13,7 @@ describe("Cypress Exception Handling", () => {
     });
   });
 
-  it("Tc1- Test Failure when trying to find incorrect locator- error Message", () => {
+  it("Test Failure when trying to find incorrect locator- error Message", () => {
     cy.visit(
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
     );
@@ -21,9 +21,11 @@ describe("Cypress Exception Handling", () => {
     cy.get('[id="input-password"]').type("Cypress1234!!");
     cy.get('[value="Login"]').click();
     cy.get(".error-message").should("be.visible");
+    cy.log("test");
+    cy.get('[name="search"]').eq(0).type("Macbook");
   });
 
-  it("TC2- Test Failure when trying to find incorrect locator - Password", () => {
+  it("Test Failure when trying to find incorrect locator - Password", () => {
     cy.visit(
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
     );
