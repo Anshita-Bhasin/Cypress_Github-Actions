@@ -18,3 +18,6 @@ describe("Pause And Hide logs in Cypress", () => {
     cy.get('[id="input-password"]').type("Cypress123!!");
   });
 });
+
+
+

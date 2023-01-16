@@ -26,7 +26,6 @@ Cypress.on("fail", (e, runnable) => {
       "Timed out retrying after 4000ms: Expected to find element: `.error-message`, but never found it."
     )
 
-    
   ) {
     throw e;
   }
@@ -34,7 +33,7 @@ Cypress.on("fail", (e, runnable) => {
 
 Cypress.on("uncaught:exception", (e, runnable) => {
   console.log("error", e);
-  console.log("error message", e.message)
+  console.log("error message", e.message);
   console.log("runnable", runnable);
   if (e.message.includes("Things went bad")) {
     return false;
