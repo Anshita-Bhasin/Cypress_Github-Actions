@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("login", (email, password) => {
+  cy.visit("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
+   cy.get('[id="input-email"]').type(email);
+    cy.get('[id="input-password"]').type(password);
+    cy.get('[type="submit"]').eq(0).click();
+});

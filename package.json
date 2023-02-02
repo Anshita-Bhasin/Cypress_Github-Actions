@@ -4,7 +4,8 @@
   "description": "test automation using cypress",
   "main": "index.js",
   "scripts": {
-    "test": "lambdatest-cypress run"
+    "test": "npx cypress run",
+    "LT-test":"lambdatest-cypress run"
   },
   "repository": {
     "type": "git",

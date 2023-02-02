@@ -25,7 +25,6 @@ Cypress.on("fail", (e, runnable) => {
     !e.message.includes(
       "Timed out retrying after 4000ms: Expected to find element: `.error-message`, but never found it."
     )
-
   ) {
     throw e;
   }
@@ -39,3 +38,13 @@ Cypress.on("uncaught:exception", (e, runnable) => {
     return false;
   }
 });
+
+//Hide XHR Request
+// const app = window.top;
+// if (!app.document.head.querySelector("[data-hide-command-log-request]")) {
+//   const style = app.document.createElement("style");
+//   style.innerHTML =
+//     ".command-name-request, .command-name-xhr { display: none }";
+//   style.setAttribute("data-hide-command-log-request", "");
+//   app.document.head.appendChild(style);
+// }
