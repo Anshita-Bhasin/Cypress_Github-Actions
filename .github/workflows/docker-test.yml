@@ -1,0 +1,11 @@
+name: docker test
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    # Docker image with Cypress pre-installed
+    # https://github.com/cypress-io/cypress-docker-images/tree/master/included
+    container: cypress/included:12.3.0
+    steps:
+      - uses: actions/checkout@v2
+      - run: cypress run
