@@ -10,6 +10,12 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
-      - run: npx cypress run
+      
+
+        - name: Run Cypress Test
+        uses: cypress-io/github-action@v4
+        with:
+          command: npx cypress run
+          browser: chrome
 
     
