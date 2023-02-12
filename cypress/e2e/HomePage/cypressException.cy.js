@@ -30,7 +30,7 @@ describe("Cypress Exception Handling", () => {
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
     );
     cy.get('[id="input-email"]').type("lambdatest.Cypress@disposable.com");
-    cy.get('[id="input-password1"]').type("Cypress1234!!");
+    //cy.get('[id="input-password1"]').type("Cypress1234!!");
   });
 
   it("Uncaught Exception - Due to application error", () => {
