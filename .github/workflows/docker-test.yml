@@ -5,7 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     # Docker image with Cypress pre-installed
     # https://github.com/cypress-io/cypress-docker-images/tree/master/included
-    container: cypress/included:12.3.0 --browser firefox
+    container: cypress/browsers:node18.12.0-chrome107
+    #cypress/included:12.3.0 --browser firefoxcypress/browsers:node18.12.0-chrome107]
+    
     steps:
       - uses: actions/checkout@v2
       - run: cypress run
+          # browser: chrome
