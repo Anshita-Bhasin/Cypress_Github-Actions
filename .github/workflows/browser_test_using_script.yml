@@ -8,17 +8,17 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Cypress Test on Chrome
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v5
         with:
           command: npm run test:chrome
 
       - name: Run Cypress Test on Firefox
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v5
         with:
           command: npm run test:firefox
           
       - name: Run Cypress Test on Edge
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v5
         with:
           command: npm run test:edge
           
