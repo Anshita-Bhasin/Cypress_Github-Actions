@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "test automation using cypress",
   "main": "index.js",
+
   "scripts": {
+  "test:chrome": "npx cypress run --browser chrome",
+  "test:firefox": "npx cypress run --browser firefox",
+  "test:edge": "npx cypress run --browser edge",
+
     "test-browser-chrome": "npx cypress run --browser chrome",
     "test": "npx cypress run",
     "LT-test": "lambdatest-cypress run"
