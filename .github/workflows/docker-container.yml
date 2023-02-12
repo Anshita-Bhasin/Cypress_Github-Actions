@@ -5,9 +5,10 @@ jobs:
     runs-on: ubuntu-20.04
     name: Cypress Tests on docker container
     # Cypress Docker image with Chrome v107 pre-installed
-    container: cypress/browsers:node18.12.0-chrome107
+    #container: cypress/browsers:node18.12.0-chrome107
     
     
     steps:
       - uses: actions/checkout@v2
+      - uses: docker//cypress/browsers:node18.12.0-chrome107
       - uses: cypress-io/github-action@v5
