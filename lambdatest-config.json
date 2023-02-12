@@ -1,7 +1,7 @@
 {
    "lambdatest_auth": {
-      "username": "user.name",
-      "access_key": "access_key"
+      "username": "anshita",
+      "access_key": "JdkILhtNLjadgD6n6zqm8ox7wYxhSae5vvnRr1X9EsPRMScB4H"
    },
    "browsers": [
       {
@@ -10,6 +10,8 @@
          "versions": [
             "latest-1"
          ]
+
+      
       },
       {
          "browser": "Firefox",
@@ -18,18 +20,22 @@
             "latest-1"
          ]
       }
+      
+
    ],
    "run_settings": {
       "config_file": "cypress.config.js",
       "reporter_config_file": "base_reporter_config.json",
-      "build_name": "build-name",
+      "build_name": "Cypress cross browser testing using lambdatest",
       "parallels": 1,
-      "specs": "./cypress/e2e/*/*.cy.js",
+      "specs": "./cypress/e2e/*/homePage.cy.js",
       "ignore_files": "",
       "network": false,
       "headless": false,
       "npm_dependencies": {
-         "cypress": "11.2.0"
+         "cypress": "12.5.1",
+         "playwright-webkit": "^1.28.1"
+
       }
    },
    "tunnel_settings": {

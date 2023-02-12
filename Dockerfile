@@ -1,9 +1,11 @@
-FROM node:14-alpine3.16
+FROM cypress/browsers:node18.12.0-chrome107
 
 WORKDIR /app
 
+COPY package*.json ./
+
+RUN npm ci
+
 COPY . .
 
-RUN npm install
-
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "npm run cypress" ]

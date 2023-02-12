@@ -16,6 +16,4 @@ describe("Automation using Cypress", () => {
   it("Verify Product after search ", () => {
     cy.contains("Macbook");
   });
-
-  
 });
