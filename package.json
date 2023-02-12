@@ -4,6 +4,9 @@
   "description": "test automation using cypress",
   "main": "index.js",
   "scripts": {
+
+     "test-browser-chrome": "npx cypress run --browser chrome",
+    
     "test": "npx cypress run",
     "LT-test":"lambdatest-cypress run"
   },

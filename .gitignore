@@ -2,4 +2,5 @@ lambdatest-config.json
 cypress/screenshots/
 cypress/videos/
 cypress/.DS_Store
+node_modules/*
 
