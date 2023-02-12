@@ -4,11 +4,9 @@
   "description": "test automation using cypress",
   "main": "index.js",
   "scripts": {
-
-     "test-browser-chrome": "npx cypress run --browser chrome",
-    
+    "test-browser-chrome": "npx cypress run --browser chrome",
     "test": "npx cypress run",
-    "LT-test":"lambdatest-cypress run"
+    "LT-test": "lambdatest-cypress run"
   },
   "repository": {
     "type": "git",
@@ -17,7 +15,7 @@
   "author": "Anshita Bhasin",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^11.2.0"
+    "cypress": "^12.5.1"
   },
   "dependencies": {
     "lambdatest-cypress-cli": "^3.0.7"
